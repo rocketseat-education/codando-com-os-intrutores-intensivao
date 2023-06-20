@@ -28,7 +28,7 @@ img {
 }
 
 h1 {
-  font-size: 3.2rem;
+  font-size: clamp(3.2rem, 3vw + 1.5rem, 6rem);
   line-height: 4rem;
   font-weight: 900;
   color: var(--accent-color);
@@ -193,4 +193,78 @@ footer p {
   font-weight: 600;
   color: var(--white);
   text-align: center;
+}
+
+/* @media */
+@media (min-width: 1440px) {
+  h3 {
+    font-size: 3.5rem;
+    margin-top: 4rem;
+    margin-bottom: 2.4rem;
+  }
+
+  p {
+    font-size: 2rem;
+    line-height: 2.4rem;
+  }
+  
+  #hero {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2.9rem 10.3rem 10.9rem;
+    max-height: 83.6rem;
+  }
+
+  #hero .hero-text {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    order: 1;
+    margin-top: 25rem;
+  }
+
+  #hero .hero-text p {
+    font-size: 3.2rem;
+    line-height: 4rem;
+    margin-bottom: 17.9rem;
+  }
+
+  #hero .hero-text .button-down {
+    margin: 0;
+  }
+
+  #hero .astronaut {
+    order: 2;
+  }
+
+  #cards {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6rem;
+    padding: 6.4rem 11.1rem 8rem;
+  }
+
+  #cards .card {
+    padding: 3.2rem 1.3rem 3.2rem 3.2rem;
+    border-radius: 2.4rem;
+  }
+
+  #contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 9.2rem;
+    height: 62.2rem;
+    background: url(./images/stars.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    padding-left: 10.9rem;
+  }
+
+  #contact form {
+    flex: 1; 
+  }
+
+  #contact .stars {
+    flex: 1;
+  }
 }
